@@ -24,22 +24,30 @@
  */
 package de.alpharogroup.meanbean.factories;
 
-import java.io.File;
+import static org.testng.Assert.assertEquals;
 
-import org.meanbean.lang.Factory;
+import java.util.Locale;
+
+import org.testng.annotations.Test;
 
 /**
- * A factory for creating {@linkplain File} objects.
+ * The unit test class for the class {@link LocaleFactory}.
  */
-public class FileFactory implements Factory<File>
+public class LocaleFactoryTest
 {
 
 	/**
-	 * {@inheritDoc}
+	 * Test for method {@link LocaleFactory#create()}
 	 */
-	@Override
-	public File create()
+	@Test
+	public void testCreate()
 	{
-		return new File(".");
+		Locale expected;
+		Locale actual;
+		LocaleFactory factory = new LocaleFactory();
+		expected = Locale.CANADA;
+		actual = factory.create();
+		assertEquals(actual, expected);
 	}
+
 }
