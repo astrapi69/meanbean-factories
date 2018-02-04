@@ -24,22 +24,27 @@
  */
 package de.alpharogroup.meanbean.factories;
 
-import java.io.File;
+import static org.testng.Assert.assertEquals;
 
-import org.meanbean.lang.Factory;
+import org.testng.annotations.Test;
 
 /**
- * A factory for creating {@linkplain File} objects.
+ * The unit test class for the class {@link ObjectArrayFactory}.
  */
-public class FileFactory implements Factory<File>
+public class ObjectArrayFactoryTest
 {
 
 	/**
-	 * {@inheritDoc}
+	 * Test for method {@link ObjectArrayFactory#create()}
 	 */
-	@Override
-	public File create()
+	@Test
+	public void create()
 	{
-		return new File(".");
+		Object[] expected;
+		Object[] actual;
+		ObjectArrayFactory factory = new ObjectArrayFactory();
+		expected = new Object[] { "foo", "bar", "john", "doe" };
+		actual = factory.create();
+		assertEquals(actual, expected);
 	}
 }

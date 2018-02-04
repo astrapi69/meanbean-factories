@@ -24,22 +24,20 @@
  */
 package de.alpharogroup.meanbean.factories;
 
-import java.io.File;
-
 import org.meanbean.lang.Factory;
 
 /**
- * A factory for creating {@linkplain File} objects.
+ * A factory for creating {@linkplain Object} array objects.
  */
-public class FileFactory implements Factory<File>
+public class ObjectArrayFactory implements Factory<Object[]>
 {
 
 	/**
 	 * {@inheritDoc}
 	 */
 	@Override
-	public File create()
+	public Object[] create()
 	{
-		return new File(".");
+		return new Object[] { "foo", "bar", "john", "doe" };
 	}
 }
