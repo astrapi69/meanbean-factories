@@ -1,7 +1,7 @@
 ## Change log
 ----------------------
 
-Version 1.0.0-SNAPSHOT
+Version 1.0.0
 -------------
 
 ADDED: 
@@ -9,6 +9,7 @@ ADDED:
 - initial version
 - javadoc created
 - this changelog file
+- new factory classes for File, Locale, Object[], and String[] created
 
 CHANGED:
 
