@@ -1,5 +1,16 @@
 # meanbean-factories
 
+<div align="center">
+
+[![Build Status](https://travis-ci.org/astrapi69/meanbean-factories.svg?branch=master)](https://travis-ci.org/astrapi69/meanbean-factories) 
+[![Coverage Status](https://coveralls.io/repos/github/astrapi69/meanbean-factories/badge.svg?branch=develop)](https://coveralls.io/github/astrapi69/meanbean-factories?branch=develop) 
+[![Open Issues](https://img.shields.io/github/issues/astrapi69/meanbean-factories.svg?style=flat)](https://github.com/astrapi69/meanbean-factories/issues) 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/meanbean-factories/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/meanbean-factories)
+[![Javadocs](http://www.javadoc.io/badge/de.alpharogroup/meanbean-factories.svg)](http://www.javadoc.io/doc/de.alpharogroup/meanbean-factories)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](http://opensource.org/licenses/MIT)
+
+</div>
+
 This project provides factory classes for not supported property types from the meanbean library. That factory classes are intended to use in unit tests with the meanbean library.
 
 ## License
