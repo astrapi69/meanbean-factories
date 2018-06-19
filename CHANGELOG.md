@@ -7,6 +7,8 @@ Version 1.1-SNAPSHOT
 ADDED: 
 
 - added new dependency of silly-collections in version 4.29
+- added new abstract generic factory classes
+- added new factory class for List of string arrays
 
 CHANGED:
 
