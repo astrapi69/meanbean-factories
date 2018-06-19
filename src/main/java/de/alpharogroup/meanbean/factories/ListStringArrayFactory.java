@@ -24,17 +24,30 @@
  */
 package de.alpharogroup.meanbean.factories;
 
+import java.util.List;
+
+import de.alpharogroup.collections.array.ArrayFactory;
+import de.alpharogroup.collections.list.ListFactory;
+
 /**
- * A factory for creating {@linkplain String} array objects.
+ * A factory for creating a list of {@linkplain String} array objects.
  */
-public class StringArrayFactory extends AbstractArrayFactory<String>
+public class ListStringArrayFactory extends AbstractListArrayFactory<String>
 {
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public String[] create()
+	public List<String[]> create()
 	{
-		return new String[] { "foo", "bar", "john", "doe" };
+		List<String[]> lines;
+		String[] lineOne;
+		String[] lineTwo;
+		String[] lineThree;
+		lineOne = ArrayFactory.newArray("John", "23", "male");
+		lineTwo = ArrayFactory.newArray("Jim", "25", "male");
+		lineThree = ArrayFactory.newArray("Mary", "21", "female");
+		lines = ListFactory.newArrayList(lineOne, lineTwo, lineThree);
+		return lines;
 	}
 }
