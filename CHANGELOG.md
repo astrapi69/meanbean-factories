@@ -4,6 +4,10 @@
 Version 1.1-SNAPSHOT
 -------------
 
+ADDED: 
+
+- added new dependency of silly-collections in version 4.29
+
 CHANGED:
 
 - update of parent version to 3.11

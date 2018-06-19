@@ -26,9 +26,11 @@
 	<properties>
 		<!-- MEANBEAN version -->
 		<meanbean.version>2.0.3</meanbean.version>
+		<!-- SILLY-COLLECTIONS version -->
+		<silly-collections.version>4.29</silly-collections.version>
 	</properties>
-	
-	
+
+
 	<licenses>
 		<license>
 			<name>MIT License</name>
@@ -77,20 +79,140 @@
 				<artifactId>meanbean</artifactId>
 				<version>${meanbean.version}</version>
 			</dependency>
+			<!-- SILLY-COLLECTIONS DEPENDENCY -->
+			<dependency>
+				<groupId>de.alpharogroup</groupId>
+				<artifactId>silly-collections</artifactId>
+				<version>${silly-collections.version}</version>
+			</dependency>
 
 		</dependencies>
 
 	</dependencyManagement>
-	
 
-		<dependencies>
 
-			<!-- MEANBEAN DEPENDENCY -->
-			<dependency>
-				<groupId>org.meanbean</groupId>
-				<artifactId>meanbean</artifactId>
-			</dependency>
+	<dependencies>
 
-		</dependencies>
-	
+		<!-- MEANBEAN DEPENDENCY -->
+		<dependency>
+			<groupId>org.meanbean</groupId>
+			<artifactId>meanbean</artifactId>
+		</dependency>
+		<!-- SILLY-COLLECTIONS DEPENDENCY -->
+		<dependency>
+			<groupId>de.alpharogroup</groupId>
+			<artifactId>silly-collections</artifactId>
+		</dependency>
+
+	</dependencies>
+
+
+	<build>
+
+		<resources>
+
+			<resource>
+				<filtering>false</filtering>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**</include>
+				</includes>
+				<excludes>
+					<exclude>**/*.java</exclude>
+					<exclude>**/package.html</exclude>
+				</excludes>
+			</resource>
+
+			<resource>
+				<filtering>false</filtering>
+				<directory>src/main/resources</directory>
+			</resource>
+
+			<resource>
+				<filtering>false</filtering>
+				<directory>src/site</directory>
+			</resource>
+
+		</resources>
+
+		<testResources>
+
+			<testResource>
+				<filtering>false</filtering>
+				<directory>src/test/java</directory>
+				<includes>
+					<include>**</include>
+				</includes>
+				<excludes>
+					<exclude>**/*.java</exclude>
+					<exclude>**/package.html</exclude>
+				</excludes>
+			</testResource>
+			<testResource>
+				<filtering>false</filtering>
+				<directory>src/test/resources</directory>
+			</testResource>
+
+		</testResources>
+
+		<pluginManagement>
+
+			<plugins>
+
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>cobertura-maven-plugin</artifactId>
+					<configuration>
+						<instrumentation>
+							<excludes>
+								<!-- abstract classes -->
+								<!-- annotations -->
+								<!-- enums -->
+								<!-- beans -->
+								<!-- exceptions -->
+								<!-- interfaces -->
+								<!-- deprecated classes -->
+								<!-- constant classes with only constants -->
+								<!-- explicit abstract classes -->
+								<exclude>de/alpharogroup/meanbean/factories/AbstractArrayFactory.class</exclude>
+								<exclude>de/alpharogroup/meanbean/factories/AbstractListArrayFactory.class</exclude>
+								<!-- explicit annotations -->
+								<!-- explicit bean classes -->
+								<!-- explicit constant classes with only constants -->
+								<!-- explicit delegation classes -->
+								<!-- explicit enums -->
+								<!-- explicit exceptions -->
+								<!-- explicit interfaces -->
+							</excludes>
+						</instrumentation>
+					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<goal>clean</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+			</plugins>
+
+		</pluginManagement>
+
+		<plugins>
+
+			<plugin>
+				<inherited>true</inherited>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<inherited>true</inherited>
+				<artifactId>maven-source-plugin</artifactId>
+			</plugin>
+
+		</plugins>
+
+	</build>
+
 </project>
