@@ -24,17 +24,19 @@
  */
 package de.alpharogroup.meanbean.factories;
 
+import java.util.List;
+
+import org.meanbean.lang.Factory;
+
 /**
- * A factory for creating {@linkplain String} array objects.
+ * An abstract factory for creating a list of array objects.
  */
-public class StringArrayFactory extends AbstractArrayFactory<String>
+public abstract class AbstractListArrayFactory<T> implements Factory<List<T[]>>
 {
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public String[] create()
-	{
-		return new String[] { "foo", "bar", "john", "doe" };
-	}
+	@Override
+	public abstract List<T[]> create();
 }

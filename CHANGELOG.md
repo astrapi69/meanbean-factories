@@ -1,6 +1,20 @@
 ## Change log
 ----------------------
 
+Version 1.1
+-------------
+
+ADDED: 
+
+- added new dependency of silly-collections in version 4.31
+- added new abstract generic factory classes
+- added new factory class for List of string arrays
+
+CHANGED:
+
+- update of parent version to 3.11
+- removed unneeded .0 at the end of version
+
 Version 1.0.0
 -------------
 

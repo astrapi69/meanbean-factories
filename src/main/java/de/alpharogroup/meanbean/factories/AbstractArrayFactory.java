@@ -24,17 +24,17 @@
  */
 package de.alpharogroup.meanbean.factories;
 
+import org.meanbean.lang.Factory;
+
 /**
- * A factory for creating {@linkplain String} array objects.
+ * An abstract factory for creating array objects.
  */
-public class StringArrayFactory extends AbstractArrayFactory<String>
+public abstract class AbstractArrayFactory<T> implements Factory<T[]>
 {
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public String[] create()
-	{
-		return new String[] { "foo", "bar", "john", "doe" };
-	}
+	@Override
+	public abstract T[] create();
 }
