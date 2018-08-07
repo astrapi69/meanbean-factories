@@ -26,9 +26,13 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 
 Than you can add the dependency to your dependencies:
 
+	<properties>
+			...
 		<!-- MEANBEAN-FACTORIES version -->
 		<meanbean-factories.version>1.1</meanbean-factories.version>
-
+			...
+	</properties>
+			...
 		<dependencies>
 			...
 			<!-- MEANBEAN-FACTORIES DEPENDENCY -->
