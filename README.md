@@ -26,9 +26,13 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 
 Than you can add the dependency to your dependencies:
 
+	<properties>
+			...
 		<!-- MEANBEAN-FACTORIES version -->
-		<meanbean-factories.version>1.1</meanbean-factories.version>
-
+		<meanbean-factories.version>1.1.1</meanbean-factories.version>
+			...
+	</properties>
+			...
 		<dependencies>
 			...
 			<!-- MEANBEAN-FACTORIES DEPENDENCY -->
@@ -65,11 +69,11 @@ No animals were harmed in the making of this library.
 
 If you like this library, please consider a donation through bitcoin or over bitcoin-cash with:
 
-1Jzso5h7U82QCNmgxxSCya1yUK7UVcSXsW
+36JxRRDfRazLNqUV6NsywCw1q7TK38ukpC
 
 or over ether with:
 
-0xaB6EaE10F352268B0CA672Dd6e999C86344D49D8
+0x588Aa02De98B1Ef70afeDC3ec5290130a3E5e273
 
 or over flattr:
 
