@@ -1,8 +1,14 @@
 ## Change log
 ----------------------
 
-Version 1.2-SNAPSHOT
+Version 1.1.1
 -------------
+
+CHANGED:
+
+- update of parent version to 4.4
+- update of dependency silly-collections version to 5
+
 
 Version 1.1
 -------------
