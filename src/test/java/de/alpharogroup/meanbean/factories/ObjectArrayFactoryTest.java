@@ -24,7 +24,8 @@
  */
 package de.alpharogroup.meanbean.factories;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.testng.annotations.Test;
 
@@ -45,6 +46,6 @@ public class ObjectArrayFactoryTest
 		ObjectArrayFactory factory = new ObjectArrayFactory();
 		expected = new Object[] { "foo", "bar", "john", "doe" };
 		actual = factory.create();
-		assertEquals(actual, expected);
+		assertThat(actual, equalTo(expected));
 	}
 }
