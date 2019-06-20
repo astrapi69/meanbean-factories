@@ -14,6 +14,8 @@
 
 This project provides factory classes for not supported property types from the meanbean library. That factory classes are intended to use in unit tests with the meanbean library.
 
+If you like this project put a ⭐ and donate
+
 ## License
 
 The source code comes under the liberal MIT License, making meanbean-factories great for all types of applications.
