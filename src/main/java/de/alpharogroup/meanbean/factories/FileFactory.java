@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2012 Asterios Raptis
+ * Copyright (C) 2015 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -24,9 +24,9 @@
  */
 package de.alpharogroup.meanbean.factories;
 
-import java.io.File;
-
 import org.meanbean.lang.Factory;
+
+import java.io.File;
 
 /**
  * A factory for creating {@linkplain File} objects.

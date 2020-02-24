@@ -4,6 +4,16 @@
 Version 1.2-SNAPSHOT
 -------------
 
+ADDED:
+ 
+- new build system gradle
+
+CHANGED:
+
+- removed maven build system and all related files
+- removed all lombok dependent imports
+
+
 Version 1.1.1
 -------------
 

@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2012 Asterios Raptis
+ * Copyright (C) 2015 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -24,11 +24,11 @@
  */
 package de.alpharogroup.meanbean.factories;
 
-import static org.testng.AssertJUnit.assertEquals;
+import org.testng.annotations.Test;
 
 import java.util.Locale;
 
-import org.testng.annotations.Test;
+import static org.testng.AssertJUnit.assertEquals;
 
 /**
  * The unit test class for the class {@link LocaleFactory}.

@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2012 Asterios Raptis
+ * Copyright (C) 2015 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -24,10 +24,10 @@
  */
 package de.alpharogroup.meanbean.factories;
 
-import java.util.List;
-
 import de.alpharogroup.collections.array.ArrayFactory;
 import de.alpharogroup.collections.list.ListFactory;
+
+import java.util.List;
 
 /**
  * A factory for creating a list of {@linkplain String} array objects.
