@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2012 Asterios Raptis
+ * Copyright (C) 2015 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -24,9 +24,10 @@
  */
 package de.alpharogroup.meanbean.factories;
 
-import static org.testng.Assert.assertEquals;
-
 import org.testng.annotations.Test;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
  * The unit test class for the class {@link StringArrayFactory}.
@@ -45,6 +46,6 @@ public class StringArrayFactoryTest
 		StringArrayFactory factory = new StringArrayFactory();
 		expected = new String[] { "foo", "bar", "john", "doe" };
 		actual = factory.create();
-		assertEquals(actual, expected);
+		assertThat(actual, equalTo(expected));
 	}
 }

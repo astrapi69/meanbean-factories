@@ -8,10 +8,13 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/meanbean-factories/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/meanbean-factories)
 [![Javadocs](http://www.javadoc.io/badge/de.alpharogroup/meanbean-factories.svg)](http://www.javadoc.io/doc/de.alpharogroup/meanbean-factories)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](http://opensource.org/licenses/MIT)
+[![Donate](https://img.shields.io/badge/donate-❤-ff2244.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVBTWLRAZ7HB8)
 
 </div>
 
 This project provides factory classes for not supported property types from the meanbean library. That factory classes are intended to use in unit tests with the meanbean library.
+
+If you like this project put a ⭐ and donate
 
 ## License
 
@@ -26,9 +29,13 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 
 Than you can add the dependency to your dependencies:
 
+	<properties>
+			...
 		<!-- MEANBEAN-FACTORIES version -->
-		<meanbean-factories.version>1.1</meanbean-factories.version>
-
+		<meanbean-factories.version>1.2</meanbean-factories.version>
+			...
+	</properties>
+			...
 		<dependencies>
 			...
 			<!-- MEANBEAN-FACTORIES DEPENDENCY -->
@@ -39,6 +46,25 @@ Than you can add the dependency to your dependencies:
 			</dependency>
 			...
 		</dependencies>
+
+			
+## gradle dependency
+
+You can first define the version in the ext section and add than the following gradle dependency to your project `build.gradle` if you want to import the core functionality of meanbean-factories:
+
+```
+ext {
+			...
+    meanbeanFactoriesVersion = "1.2"
+			...
+}
+dependencies {
+			...
+implementation("de.alpharogroup:meanbean-factories:$meanbeanFactoriesVersion")
+			...
+}
+```
+	
 
 
 ## Want to Help and improve it? ###
@@ -65,11 +91,11 @@ No animals were harmed in the making of this library.
 
 If you like this library, please consider a donation through bitcoin or over bitcoin-cash with:
 
-1Jzso5h7U82QCNmgxxSCya1yUK7UVcSXsW
+36JxRRDfRazLNqUV6NsywCw1q7TK38ukpC
 
 or over ether with:
 
-0xaB6EaE10F352268B0CA672Dd6e999C86344D49D8
+0x588Aa02De98B1Ef70afeDC3ec5290130a3E5e273
 
 or over flattr:
 

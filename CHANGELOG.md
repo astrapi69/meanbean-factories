@@ -1,6 +1,28 @@
 ## Change log
 ----------------------
 
+Version 1.2
+-------------
+
+ADDED:
+ 
+- new build system gradle
+
+CHANGED:
+
+- removed maven build system and all related files
+- removed all lombok dependent imports
+
+
+Version 1.1.1
+-------------
+
+CHANGED:
+
+- update of parent version to 4.4
+- update of dependency silly-collections version to 5
+
+
 Version 1.1
 -------------
 
