@@ -32,7 +32,7 @@ Than you can add the dependency to your dependencies:
 	<properties>
 			...
 		<!-- MEANBEAN-FACTORIES version -->
-		<meanbean-factories.version>1.1.1</meanbean-factories.version>
+		<meanbean-factories.version>1.2</meanbean-factories.version>
 			...
 	</properties>
 			...
@@ -46,6 +46,25 @@ Than you can add the dependency to your dependencies:
 			</dependency>
 			...
 		</dependencies>
+
+			
+## gradle dependency
+
+You can first define the version in the ext section and add than the following gradle dependency to your project `build.gradle` if you want to import the core functionality of meanbean-factories:
+
+```
+ext {
+			...
+    meanbeanFactoriesVersion = "1.2"
+			...
+}
+dependencies {
+			...
+implementation("de.alpharogroup:meanbean-factories:$meanbeanFactoriesVersion")
+			...
+}
+```
+	
 
 
 ## Want to Help and improve it? ###
