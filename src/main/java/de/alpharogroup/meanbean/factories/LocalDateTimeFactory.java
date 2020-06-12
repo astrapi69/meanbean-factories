@@ -24,27 +24,21 @@
  */
 package de.alpharogroup.meanbean.factories;
 
-import org.junit.jupiter.api.Test;
+import org.meanbean.lang.Factory;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
+import java.time.LocalDateTime;
 
 /**
- * The unit test class for the class {@link StringArrayFactory}.
+ * A factory for creating {@linkplain LocalDateTime} objects.
  */
-public class StringArrayFactoryTest
+public class LocalDateTimeFactory implements Factory<LocalDateTime>
 {
 
 	/**
-	 * Test for method {@link StringArrayFactory#create()}
+	 * {@inheritDoc}
 	 */
-	@Test public void create()
+	@Override public LocalDateTime create()
 	{
-		String[] expected;
-		String[] actual;
-		StringArrayFactory factory = new StringArrayFactory();
-		expected = new String[] { "foo", "bar", "john", "doe" };
-		actual = factory.create();
-		assertThat(actual, equalTo(expected));
+		return LocalDateTime.now();
 	}
 }
