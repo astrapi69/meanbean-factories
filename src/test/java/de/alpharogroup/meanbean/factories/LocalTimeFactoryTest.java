@@ -26,25 +26,29 @@ package de.alpharogroup.meanbean.factories;
 
 import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
+import java.time.LocalTime;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * The unit test class for the class {@link StringArrayFactory}.
+ * The unit test class for the class {@link LocalTimeFactory}.
  */
-public class StringArrayFactoryTest
+public class LocalTimeFactoryTest
 {
 
 	/**
-	 * Test for method {@link StringArrayFactory#create()}
+	 * Test for method {@link LocaleFactory#create()}
 	 */
-	@Test public void create()
+	@Test public void testCreate()
 	{
-		String[] expected;
-		String[] actual;
-		StringArrayFactory factory = new StringArrayFactory();
-		expected = new String[] { "foo", "bar", "john", "doe" };
+		LocalTime expected;
+		LocalTime actual;
+		LocalTimeFactory factory = new LocalTimeFactory();
+		expected = LocalTime.now();
 		actual = factory.create();
-		assertThat(actual, equalTo(expected));
+		assertEquals(actual.getHour(), expected.getHour());
+		assertEquals(actual.getMinute(), expected.getMinute());
+		assertEquals(actual.getSecond(), expected.getSecond());
 	}
+
 }

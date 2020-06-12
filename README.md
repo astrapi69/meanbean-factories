@@ -32,7 +32,7 @@ Than you can add the dependency to your dependencies:
 	<properties>
 			...
 		<!-- MEANBEAN-FACTORIES version -->
-		<meanbean-factories.version>1.2</meanbean-factories.version>
+		<meanbean-factories.version>2</meanbean-factories.version>
 			...
 	</properties>
 			...
@@ -55,7 +55,7 @@ You can first define the version in the ext section and add than the following g
 ```
 ext {
 			...
-    meanbeanFactoriesVersion = "1.2"
+    meanbeanFactoriesVersion = "2"
 			...
 }
 dependencies {
