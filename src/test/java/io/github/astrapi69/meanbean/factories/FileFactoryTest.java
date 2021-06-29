@@ -22,29 +22,32 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package de.alpharogroup.meanbean.factories;
+package io.github.astrapi69.meanbean.factories;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.io.File;
 
 import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 /**
- * The unit test class for the class {@link ObjectArrayFactory}.
+ * The unit test class for the class {@link FileFactory}.
  */
-public class ObjectArrayFactoryTest
+public class FileFactoryTest
 {
 
 	/**
-	 * Test for method {@link ObjectArrayFactory#create()}
+	 * Test for method {@link FileFactory#create()}
 	 */
-	@Test public void create()
+	@Test
+	public void testCreate()
 	{
-		Object[] expected;
-		Object[] actual;
-		ObjectArrayFactory factory = new ObjectArrayFactory();
-		expected = new Object[] { "foo", "bar", "john", "doe" };
+		File expected;
+		File actual;
+		FileFactory factory = new FileFactory();
+		expected = new File(".");
 		actual = factory.create();
-		assertThat(actual, equalTo(expected));
+		assertEquals(actual, expected);
 	}
+
 }

@@ -22,18 +22,24 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package de.alpharogroup.meanbean.factories;
+package io.github.astrapi69.meanbean.factories;
+
+import java.time.LocalTime;
 
 import org.meanbean.lang.Factory;
 
 /**
- * An abstract factory for creating array objects.
+ * A factory for creating {@linkplain LocalTime} objects.
  */
-public abstract class AbstractArrayFactory<T> implements Factory<T[]>
+public class LocalTimeFactory implements Factory<LocalTime>
 {
 
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override public abstract T[] create();
+	@Override
+	public LocalTime create()
+	{
+		return LocalTime.now();
+	}
 }

@@ -1,22 +1,19 @@
 ## Change log
 ----------------------
 
-Version 2.1-SNAPSHOT
--------------
-
-Version 2
+Version 1.3
 -------------
 
 ADDED: 
 
 - added new factory class for the new java.util.time package LocalDate, LocalTime and LocalDateTime
-- added new test-dependency junit-jupiter (junit 5) in version 5.6.2
+- added new test-dependency junit-jupiter (junit 5) in version 5.7.2
 
 CHANGED:
 
-- update jdk version to 11
-- update gradle to new version 6.5
-- update of dependency silly-collections to new version 8.2
+- update gradle to new version 6.9
+- changed to new package io.github.astrapi69
+- update of dependency silly-collections to new version 8.7
 - remove of test-dependency testng 
 - extracted project properties to gradle.properties
 

@@ -22,31 +22,19 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package de.alpharogroup.meanbean.factories;
+package io.github.astrapi69.meanbean.factories;
 
-import org.junit.jupiter.api.Test;
-
-import java.io.File;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.meanbean.lang.Factory;
 
 /**
- * The unit test class for the class {@link FileFactory}.
+ * An abstract factory for creating array objects.
  */
-public class FileFactoryTest
+public abstract class AbstractArrayFactory<T> implements Factory<T[]>
 {
 
 	/**
-	 * Test for method {@link FileFactory#create()}
+	 * {@inheritDoc}
 	 */
-	@Test public void testCreate()
-	{
-		File expected;
-		File actual;
-		FileFactory factory = new FileFactory();
-		expected = new File(".");
-		actual = factory.create();
-		assertEquals(actual, expected);
-	}
-
+	@Override
+	public abstract T[] create();
 }

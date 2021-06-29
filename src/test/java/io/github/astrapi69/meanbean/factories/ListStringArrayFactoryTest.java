@@ -22,15 +22,16 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package de.alpharogroup.meanbean.factories;
+package io.github.astrapi69.meanbean.factories;
 
-import de.alpharogroup.collections.array.ArrayFactory;
-import de.alpharogroup.collections.list.ListFactory;
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+
+import io.github.astrapi69.collections.array.ArrayFactory;
+import io.github.astrapi69.collections.list.ListFactory;
 
 /**
  * The unit test class for the class {@link ListStringArrayFactory}.
@@ -41,7 +42,8 @@ public class ListStringArrayFactoryTest
 	/**
 	 * Test method for {@link ListStringArrayFactory#create()}.
 	 */
-	@Test public final void testCreate()
+	@Test
+	public final void testCreate()
 	{
 		String actual;
 		String expected;

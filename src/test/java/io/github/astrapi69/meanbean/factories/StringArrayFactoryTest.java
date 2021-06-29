@@ -22,33 +22,30 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package de.alpharogroup.meanbean.factories;
+package io.github.astrapi69.meanbean.factories;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalTime;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 /**
- * The unit test class for the class {@link LocalTimeFactory}.
+ * The unit test class for the class {@link StringArrayFactory}.
  */
-public class LocalTimeFactoryTest
+public class StringArrayFactoryTest
 {
 
 	/**
-	 * Test for method {@link LocaleFactory#create()}
+	 * Test for method {@link StringArrayFactory#create()}
 	 */
-	@Test public void testCreate()
+	@Test
+	public void create()
 	{
-		LocalTime expected;
-		LocalTime actual;
-		LocalTimeFactory factory = new LocalTimeFactory();
-		expected = LocalTime.now();
+		String[] expected;
+		String[] actual;
+		StringArrayFactory factory = new StringArrayFactory();
+		expected = new String[] { "foo", "bar", "john", "doe" };
 		actual = factory.create();
-		assertEquals(actual.getHour(), expected.getHour());
-		assertEquals(actual.getMinute(), expected.getMinute());
-		assertEquals(actual.getSecond(), expected.getSecond());
+		assertThat(actual, equalTo(expected));
 	}
-
 }

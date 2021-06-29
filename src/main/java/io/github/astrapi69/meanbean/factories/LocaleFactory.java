@@ -22,21 +22,24 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package de.alpharogroup.meanbean.factories;
+package io.github.astrapi69.meanbean.factories;
+
+import java.util.Locale;
 
 import org.meanbean.lang.Factory;
 
 /**
- * A factory for creating {@linkplain Object} array objects.
+ * A factory for creating {@linkplain Locale} objects.
  */
-public class ObjectArrayFactory implements Factory<Object[]>
+public class LocaleFactory implements Factory<Locale>
 {
 
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override public Object[] create()
+	@Override
+	public Locale create()
 	{
-		return new Object[] { "foo", "bar", "john", "doe" };
+		return Locale.CANADA;
 	}
 }

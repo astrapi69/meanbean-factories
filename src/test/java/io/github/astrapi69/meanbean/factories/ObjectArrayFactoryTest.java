@@ -22,36 +22,30 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package de.alpharogroup.meanbean.factories;
+package io.github.astrapi69.meanbean.factories;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDateTime;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 /**
- * The unit test class for the class {@link LocalDateTimeFactory}.
+ * The unit test class for the class {@link ObjectArrayFactory}.
  */
-public class LocalDateTimeFactoryTest
+public class ObjectArrayFactoryTest
 {
 
 	/**
-	 * Test for method {@link LocaleFactory#create()}
+	 * Test for method {@link ObjectArrayFactory#create()}
 	 */
-	@Test public void testCreate()
+	@Test
+	public void create()
 	{
-		LocalDateTime expected;
-		LocalDateTime actual;
-		LocalDateTimeFactory factory = new LocalDateTimeFactory();
-		expected = LocalDateTime.now();
+		Object[] expected;
+		Object[] actual;
+		ObjectArrayFactory factory = new ObjectArrayFactory();
+		expected = new Object[] { "foo", "bar", "john", "doe" };
 		actual = factory.create();
-		assertEquals(actual.getYear(), expected.getYear());
-		assertEquals(actual.getMonth(), expected.getMonth());
-		assertEquals(actual.getDayOfMonth(), expected.getDayOfMonth());
-		assertEquals(actual.getHour(), expected.getHour());
-		assertEquals(actual.getMinute(), expected.getMinute());
-		assertEquals(actual.getSecond(), expected.getSecond());
+		assertThat(actual, equalTo(expected));
 	}
-
 }

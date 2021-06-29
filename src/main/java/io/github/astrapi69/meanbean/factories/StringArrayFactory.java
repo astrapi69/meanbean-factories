@@ -22,23 +22,19 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package de.alpharogroup.meanbean.factories;
-
-import org.meanbean.lang.Factory;
-
-import java.io.File;
+package io.github.astrapi69.meanbean.factories;
 
 /**
- * A factory for creating {@linkplain File} objects.
+ * A factory for creating {@linkplain String} array objects.
  */
-public class FileFactory implements Factory<File>
+public class StringArrayFactory extends AbstractArrayFactory<String>
 {
 
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override public File create()
+	public String[] create()
 	{
-		return new File(".");
+		return new String[] { "foo", "bar", "john", "doe" };
 	}
 }

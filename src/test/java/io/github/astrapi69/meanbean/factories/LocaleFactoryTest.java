@@ -22,23 +22,32 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package de.alpharogroup.meanbean.factories;
+package io.github.astrapi69.meanbean.factories;
 
-import org.meanbean.lang.Factory;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.time.LocalDate;
+import java.util.Locale;
+
+import org.junit.jupiter.api.Test;
 
 /**
- * A factory for creating {@linkplain LocalDate} objects.
+ * The unit test class for the class {@link LocaleFactory}.
  */
-public class LocalDateFactory implements Factory<LocalDate>
+public class LocaleFactoryTest
 {
 
 	/**
-	 * {@inheritDoc}
+	 * Test for method {@link LocaleFactory#create()}
 	 */
-	@Override public LocalDate create()
+	@Test
+	public void testCreate()
 	{
-		return LocalDate.now();
+		Locale expected;
+		Locale actual;
+		LocaleFactory factory = new LocaleFactory();
+		expected = Locale.CANADA;
+		actual = factory.create();
+		assertEquals(actual, expected);
 	}
+
 }

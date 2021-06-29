@@ -22,20 +22,32 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package de.alpharogroup.meanbean.factories;
+package io.github.astrapi69.meanbean.factories;
 
-import org.meanbean.lang.Factory;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.util.List;
+import java.time.LocalDate;
+
+import org.junit.jupiter.api.Test;
 
 /**
- * An abstract factory for creating a list of array objects.
+ * The unit test class for the class {@link LocalDateFactory}.
  */
-public abstract class AbstractListArrayFactory<T> implements Factory<List<T[]>>
+public class LocalDateFactoryTest
 {
 
 	/**
-	 * {@inheritDoc}
+	 * Test for method {@link LocaleFactory#create()}
 	 */
-	@Override public abstract List<T[]> create();
+	@Test
+	public void testCreate()
+	{
+		LocalDate expected;
+		LocalDate actual;
+		LocalDateFactory factory = new LocalDateFactory();
+		expected = LocalDate.now();
+		actual = factory.create();
+		assertEquals(actual, expected);
+	}
+
 }

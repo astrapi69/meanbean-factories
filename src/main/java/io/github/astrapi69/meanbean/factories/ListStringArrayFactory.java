@@ -22,12 +22,12 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package de.alpharogroup.meanbean.factories;
-
-import de.alpharogroup.collections.array.ArrayFactory;
-import de.alpharogroup.collections.list.ListFactory;
+package io.github.astrapi69.meanbean.factories;
 
 import java.util.List;
+
+import io.github.astrapi69.collections.array.ArrayFactory;
+import io.github.astrapi69.collections.list.ListFactory;
 
 /**
  * A factory for creating a list of {@linkplain String} array objects.
