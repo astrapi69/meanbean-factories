@@ -20,6 +20,40 @@ If you like this project put a ⭐ and donate
 
 The source code comes under the liberal MIT License, making meanbean-factories great for all types of applications.
 
+
+## gradle dependency
+
+Replace the variable ${latestVersion} with the current latest version: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/meanbean-factories/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/meanbean-factories)
+
+You can first define the version in the ext section and add than the following gradle dependency to
+your project `build.gradle` if you want to import the core functionality of meanbean-factories:
+
+define version in file gradle.properties
+
+```
+meanbeanFactoriesVersion=${latestVersion}
+```
+
+or in build.gradle ext area
+
+```
+ext {
+            ...
+    meanbeanFactoriesVersion = "${latestVersion}"
+            ...
+}
+```
+
+and then add the dependency to the dependencies area
+
+```
+dependencies {
+            ...
+implementation("io.github.astrapi69:meanbean-factories:$meanbeanFactoriesVersion")
+            ...
+}
+```
+
 ## Maven dependency
 
 Maven dependency is now on sonatype.
@@ -32,7 +66,7 @@ Than you can add the dependency to your dependencies:
     <properties>
             ...
         <!-- MEANBEAN-FACTORIES version -->
-        <meanbean-factories.version>1.3</meanbean-factories.version>
+        <meanbean-factories.version>${latestVersion}</meanbean-factories.version>
             ...
     </properties>
             ...
@@ -47,37 +81,6 @@ Than you can add the dependency to your dependencies:
             ...
         </dependencies>
 
-
-## gradle dependency
-
-You can first define the version in the ext section and add than the following gradle dependency to
-your project `build.gradle` if you want to import the core functionality of meanbean-factories:
-
-define version in file gradle.properties
-
-```
-meanbeanFactoriesVersion=1.3
-```
-
-or in build.gradle ext area
-
-```
-ext {
-            ...
-    meanbeanFactoriesVersion = "1.3"
-            ...
-}
-```
-
-and then add the dependency to the dependencies area
-
-```
-dependencies {
-            ...
-implementation("io.github.astrapi69:meanbean-factories:$meanbeanFactoriesVersion")
-            ...
-}
-```
 
 ## Want to Help and improve it? ###
 
