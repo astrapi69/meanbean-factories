@@ -1,0 +1,11 @@
+dependencies {
+
+    implementation libs.meanbean
+    implementation libs.silly.collection
+
+    testImplementation libs.hamcrest.core
+    // Note: use of bundles...
+    testImplementation libs.bundles.unit.testing
+    testRuntimeOnly libs.junit.platform.launcher
+
+}

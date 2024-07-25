@@ -2,9 +2,9 @@
 
 <div align="center">
 
-[![Build Status](https://api.travis-ci.com/astrapi69/meanbean-factories.svg?branch=master)](https://travis-ci.com/github/astrapi69/meanbean-factories) 
-[![Coverage Status](https://coveralls.io/repos/github/astrapi69/meanbean-factories/badge.svg?branch=develop)](https://coveralls.io/github/astrapi69/meanbean-factories?branch=develop) 
-[![Open Issues](https://img.shields.io/github/issues/astrapi69/meanbean-factories.svg?style=flat)](https://github.com/astrapi69/meanbean-factories/issues) 
+[![Build Status](https://api.travis-ci.com/astrapi69/meanbean-factories.svg?branch=master)](https://travis-ci.com/github/astrapi69/meanbean-factories)
+[![Coverage Status](https://coveralls.io/repos/github/astrapi69/meanbean-factories/badge.svg?branch=develop)](https://coveralls.io/github/astrapi69/meanbean-factories?branch=develop)
+[![Open Issues](https://img.shields.io/github/issues/astrapi69/meanbean-factories.svg?style=flat)](https://github.com/astrapi69/meanbean-factories/issues)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/meanbean-factories/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.astrapi69/meanbean-factories)
 [![Javadocs](http://www.javadoc.io/badge/io.github.astrapi69/meanbean-factories.svg)](http://www.javadoc.io/doc/io.github.astrapi69/meanbean-factories)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](http://opensource.org/licenses/MIT)
@@ -29,28 +29,28 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 
 Than you can add the dependency to your dependencies:
 
-	<properties>
-			...
-		<!-- MEANBEAN-FACTORIES version -->
-		<meanbean-factories.version>1.3</meanbean-factories.version>
-			...
-	</properties>
-			...
-		<dependencies>
-			...
-			<!-- MEANBEAN-FACTORIES DEPENDENCY -->
-			<dependency>
-				<groupId>io.github.astrapi69</groupId>
-				<artifactId>meanbean-factories</artifactId>
-				<version>${meanbean-factories.version}</version>
-			</dependency>
-			...
-		</dependencies>
+    <properties>
+            ...
+        <!-- MEANBEAN-FACTORIES version -->
+        <meanbean-factories.version>1.3</meanbean-factories.version>
+            ...
+    </properties>
+            ...
+        <dependencies>
+            ...
+            <!-- MEANBEAN-FACTORIES DEPENDENCY -->
+            <dependency>
+                <groupId>io.github.astrapi69</groupId>
+                <artifactId>meanbean-factories</artifactId>
+                <version>${meanbean-factories.version}</version>
+            </dependency>
+            ...
+        </dependencies>
 
-			
+
 ## gradle dependency
 
-You can first define the version in the ext section and add than the following gradle dependency to 
+You can first define the version in the ext section and add than the following gradle dependency to
 your project `build.gradle` if you want to import the core functionality of meanbean-factories:
 
 define version in file gradle.properties
@@ -63,9 +63,9 @@ or in build.gradle ext area
 
 ```
 ext {
-			...
+            ...
     meanbeanFactoriesVersion = "1.3"
-			...
+            ...
 }
 ```
 
@@ -73,9 +73,9 @@ and then add the dependency to the dependencies area
 
 ```
 dependencies {
-			...
+            ...
 implementation("io.github.astrapi69:meanbean-factories:$meanbeanFactoriesVersion")
-			...
+            ...
 }
 ```
 
@@ -166,7 +166,3 @@ or over flattr:
 |:-:|
 |![Travis CI](https://travis-ci.com/images/logos/TravisCI-Full-Color.png)|
 |Many thanks to [Travis CI](https://travis-ci.com) for providing a free continuous integration service for open source projects.|
-
-
-
-
