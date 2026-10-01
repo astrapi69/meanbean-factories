@@ -1,8 +1,37 @@
 ## Change log
 ----------------------
 
-Version 3.1-SNAPSHOT
+Version 3.1
 -------------
+
+FIXED:
+
+- the three testers in MeanBeanExtensions are no longer static. MeanBean keeps its service context
+  per thread, keyed by a weakly held object, and every new tester or verifier replaces that key, so
+  a tester in a static field depended on an object it does not own staying alive. Once anything
+  else on the thread built its own tester or verifier and that object was collected, every call
+  here threw "context key not available" - in a consumer it struck in CI only, while the same
+  commit was green locally, and here on JDK 25 it failed 6 of this library's own 6 tests. A tester
+  built inside the method owns its context for the duration of the call (#1)
+
+CHANGED:
+
+- build only: the Gradle wrapper goes from 8.9 to 9.7.1. 8.9 cannot run on JDK 25 at all
+  ("Unsupported class file major version 69"), so the fix above could not have been verified
+  without it
+- build only: releases go through the Central Portal with the nmcp plugin and
+  publishingType USER_MANAGED, so an upload waits for a deliberate release click. The old target,
+  https://oss.sonatype.org/service/local/staging/deploy/maven2/, was shut down by Sonatype and
+  would have published nowhere. Signing now follows the KEY rather than the version form, so a
+  snapshot with a key is signed and a release without one is refused instead of published
+  unsigned (#3)
+- build only: an API compatibility gate compares every build against the last release from Maven
+  Central with japicmp; within the same major a break fails the build. Measured by making a public
+  method package-private, which it reported as METHOD_LESS_ACCESSIBLE (#3)
+- build only: .gitignore no longer ignores the whole gradle/ directory. Files already tracked
+  stayed tracked, so nothing looked wrong until a new build script was added and silently never
+  committed - which is how the gate file above reached develop as a red build (#5)
+
 
 
 Version 3
