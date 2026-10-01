@@ -1,3 +1,4 @@
+gradle/api-compatibility.gradle
 gradle/dependencies.gradle
 gradle/formatting.gradle
 gradle/grgit.gradle
