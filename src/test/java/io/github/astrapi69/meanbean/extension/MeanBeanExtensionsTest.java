@@ -25,9 +25,9 @@
 package io.github.astrapi69.meanbean.extension;
 
 import org.junit.jupiter.api.Test;
-import org.meanbean.test.BeanVerifier;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
+import org.meanbean.test.BeanVerifier;
 
 /**
  * Test class for {@link MeanBeanExtensions}
