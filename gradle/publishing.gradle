@@ -68,9 +68,9 @@ publishing {
             name = "sonatypeSnapshots"
             url = "$projectRepositoriesSnapshotsRepoUrl" as Object
             credentials {
-                username System.getenv("CENTRAL_PORTAL_TOKEN_USERNAME")
+                username = System.getenv("CENTRAL_PORTAL_TOKEN_USERNAME")
                     ?: project.findProperty("centralUsername") ?: ""
-                password System.getenv("CENTRAL_PORTAL_TOKEN_PASSWORD")
+                password = System.getenv("CENTRAL_PORTAL_TOKEN_PASSWORD")
                     ?: project.findProperty("centralPassword") ?: ""
             }
         }
