@@ -25,6 +25,7 @@
 package io.github.astrapi69.meanbean.extension;
 
 import org.junit.jupiter.api.Test;
+import org.meanbean.test.BeanVerifier;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -33,6 +34,30 @@ import org.junit.jupiter.params.provider.CsvFileSource;
  */
 public class MeanBeanExtensionsTest
 {
+
+	/**
+	 * Test that the extensions still work after somebody else created a MeanBean context on this
+	 * thread and let it be collected (#1).
+	 * <p>
+	 * MeanBean keeps its service context per thread, keyed by a weakly held object, and every new
+	 * tester or verifier replaces that key. Static testers therefore depend on an object they do
+	 * not own staying alive: measured in crypt-data, a later call threw
+	 * {@link NullPointerException} with "context key not available", in CI only, because it depends
+	 * on when the garbage collector runs.
+	 */
+	@Test
+	public void testStillWorksAfterAForeignContextWasCollected()
+	{
+		MeanBeanExtensions.testWithBeanTester(SampleBean.class);
+
+		BeanVerifier.forClass(SampleBean.class).editSettings().edited().verifyGettersAndSetters();
+		System.gc();
+		System.gc();
+
+		MeanBeanExtensions.testWithBeanTester(SampleBean.class);
+		MeanBeanExtensions.testWithHashCodeMethodTester(SampleBean.class);
+	}
+
 
 	/**
 	 * Test method for {@link MeanBeanExtensions#testWithBeanTester(Class)}
