@@ -35,9 +35,15 @@ import org.meanbean.test.HashCodeMethodTester;
 public final class MeanBeanExtensions
 {
 
-	private static final BeanTester beanTester = new BeanTester();
-	private static final HashCodeMethodTester hashCodeMethodTester = new HashCodeMethodTester();
-	private static final EqualsMethodTester equalsMethodTester = new EqualsMethodTester();
+	/*
+	 * No static testers. MeanBean keeps its service context per thread, keyed by a weakly held
+	 * object, and every new tester or verifier REPLACES that key - so a tester kept in a static
+	 * field depends on an object it does not own staying alive. Once anything else on the thread
+	 * builds its own tester or verifier and that object is collected, every call here throws
+	 * "context key not available" (#1). A tester built inside the method owns a context for the
+	 * duration of the call, which nothing can take away. The cost is one short-lived object per
+	 * call, in a test helper.
+	 */
 
 	/**
 	 * Tests the given bean class with the {@link BeanTester}
@@ -47,7 +53,7 @@ public final class MeanBeanExtensions
 	 */
 	public static void testWithBeanTester(Class<?> beanClass)
 	{
-		beanTester.testBean(beanClass);
+		new BeanTester().testBean(beanClass);
 	}
 
 	/**
@@ -58,7 +64,7 @@ public final class MeanBeanExtensions
 	 */
 	public static void testWithHashCodeMethodTester(Class<?> beanClass)
 	{
-		hashCodeMethodTester.testHashCodeMethod(beanClass);
+		new HashCodeMethodTester().testHashCodeMethod(beanClass);
 	}
 
 	/**
@@ -73,7 +79,7 @@ public final class MeanBeanExtensions
 	public static void testWithEqualsMethodTester(Class<?> beanClass,
 		String... insignificantEqualsProperties)
 	{
-		equalsMethodTester.testEqualsMethod(beanClass, insignificantEqualsProperties);
+		new EqualsMethodTester().testEqualsMethod(beanClass, insignificantEqualsProperties);
 	}
 
 	/**
