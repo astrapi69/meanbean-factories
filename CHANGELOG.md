@@ -1,6 +1,17 @@
 ## Change log
 ----------------------
 
+Version 3.2-SNAPSHOT
+-------------
+
+CHANGED:
+
+- a release is published from its `RELEASE-*` tag by the new `publish.yml`, as in the rest of the family,
+  and a snapshot by a manual run of it; until now there was no publishing workflow and 3.1 went up from a
+  local tree. The build refuses an upload to the Central Portal outside CI, a release from anything but a
+  `RELEASE-*` tag, and an unsigned release, which the publishing script described but never enforced;
+  CI signs with the signing subkey that the secret `GPG_KEY_ID` names (#17)
+
 Version 3.1
 -------------
 
